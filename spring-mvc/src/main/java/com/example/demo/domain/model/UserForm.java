@@ -26,7 +26,7 @@ public class UserForm{
     private Integer age;
 
 	@Size(min = 1, max = 20, message = "備考は20字以内で入力してください", groups = Group1.class)
-	private String remark;
+	private String note;
 
 	public interface Group1{}
 	public interface Group2{}
