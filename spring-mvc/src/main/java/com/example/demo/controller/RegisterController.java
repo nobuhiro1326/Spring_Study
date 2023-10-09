@@ -34,7 +34,7 @@ public class RegisterController {
 
         if (!usersRegisterService.isValid(user)) {
             result.rejectValue("email", "email.exists", "入力したEmailは既に存在します"); // エラーメッセージを追加
-            return "form"; // エラーがある場合はフォームを再表示
+            return "form";
         }
 
         usersRegisterService.register(user);
