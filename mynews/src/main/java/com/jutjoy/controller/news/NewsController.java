@@ -16,7 +16,6 @@ import com.jutjoy.domain.entity.news.News;
 import com.jutjoy.domain.form.news.NewsCreateForm;
 import com.jutjoy.domain.service.news.NewsCreateService;
 import com.jutjoy.domain.service.news.NewsListService;
-
 @Controller
 public class NewsController {
 
@@ -25,7 +24,6 @@ public class NewsController {
 
 	@Autowired
 	private NewsListService newsListService;
-
     @GetMapping("/news/create")
     public String create(@ModelAttribute("form") NewsCreateForm  newsCreateForm){
         return "news/create";
@@ -44,7 +42,7 @@ public class NewsController {
 
     }
 
-    @GetMapping("/news/create/complete")
+    @GetMapping("news/create/complete")
     public String complete() {
     	return "news/complete";
     }
@@ -57,6 +55,4 @@ public class NewsController {
 
         return "news/list";
     }
-
-
 }
