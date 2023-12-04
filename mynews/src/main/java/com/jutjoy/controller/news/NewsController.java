@@ -52,6 +52,7 @@ public class NewsController {
 
         List<News> newsList = newsListService.list(title);
         model.addAttribute("newsList", newsList);
+        model.addAttribute("title", title);
 
         return "news/list";
     }
